@@ -1,0 +1,58 @@
+$ cd /workspace/shadcn-ui
+$ pnpm i && pnpm run lint && pnpm run build
+
+Lockfile is up to date, resolution step is skipped
+Packages: +427
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.../node_modules/@swc/core postinstall$ node postinstall.js
+.../node_modules/@swc/core postinstall: Done
+.../esbuild@0.21.5/node_modules/esbuild postinstall$ node install.js
+.../esbuild@0.25.8/node_modules/esbuild postinstall$ node install.js
+.../esbuild@0.21.5/node_modules/esbuild postinstall: Done
+.../esbuild@0.25.8/node_modules/esbuild postinstall: Done
+
+Done in 5.2s
+
+> shadcnui@ lint /workspace/shadcn-ui
+> eslint --quiet ./src
+
+
+/workspace/shadcn-ui/src/lib/auth.ts
+  53:34  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  58:42  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  64:36  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/workspace/shadcn-ui/src/pages/ExamInterface.tsx
+   19:42  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  115:42  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  240:46  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/workspace/shadcn-ui/src/pages/Results.tsx
+  143:49  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  193:47  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+/workspace/shadcn-ui/src/pages/StudentDashboard.tsx
+  55:38  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+✖ 9 problems (9 errors, 0 warnings)
+
+ ELIFECYCLE  Command failed with exit code 1.
+$ pnpm run lint && pnpm run build
+
+
+> shadcnui@ lint /workspace/shadcn-ui
+> eslint --quiet ./src
+
+
+> shadcnui@ build /workspace/shadcn-ui
+> vite build
+
+vite v5.4.19 building for production...
+transforming...
+✓ 1690 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.87 kB │ gzip:   0.43 kB
+dist/assets/index-8AArHAr_.css   62.88 kB │ gzip:  11.02 kB
+dist/assets/index-DcHqrKn7.js   402.60 kB │ gzip: 124.06 kB
+✓ built in 4.61s

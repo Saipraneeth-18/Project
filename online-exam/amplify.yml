@@ -1,0 +1,17 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - cd ./   # go to root where package.json for React is
+        - npm ci  # install frontend dependencies
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    baseDirectory: build  # React build folder
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
