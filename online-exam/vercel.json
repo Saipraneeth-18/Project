@@ -1,6 +1,6 @@
 {
   "installCommand": "CI=true pnpm install --no-frozen-lockfile",
   "buildCommand": "pnpm run build",
-  "outputDirectory": "dist",
-  "framework": "vite"
+  "outputDirectory": "build",
+  "framework": "create-react-app"
 }
